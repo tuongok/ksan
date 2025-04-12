@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { CiTurnR1 } from "react-icons/ci";
 import t1 from "../../img/t1.jpg";
 import t2 from "../../img/t2.jpg";
 import t3 from "../../img/t3.jpg";
