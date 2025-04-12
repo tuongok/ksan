@@ -1,0 +1,107 @@
+.carousel-container {
+  width: 100%;
+  padding: 30px 0;
+  overflow: hidden;
+  background: #fcfbf6;
+}
+
+.carousel-item-wrapper {
+  padding: 0 10px; 
+  box-sizing: border-box;
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background-color: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  width: 100%;
+  height: 400px;
+  transition: all 0.3s ease;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+.carousel-item .carousel-item-image{
+  overflow: hidden;
+} 
+.carousel-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 1.5s ease; 
+}
+.carousel-item img:hover{
+  transform: scale(1.2);
+}
+
+.text {
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.title {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 5px;
+  font-family: var(--font);
+}
+
+.price {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  background: #f7cf2c;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.price:hover {
+  background: black;
+  opacity: 1;
+}
+
+.slick-list {
+  margin: 0 -10px; 
+}
+
+.slick-prev:before, 
+.slick-next:before {
+  color: black !important;
+  font-size: 30px !important;
+}
+
+.slick-prev {
+  left: 10px !important;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 10px !important;
+  z-index: 1;
+}
+
+:where(.css-dev-only-do-not-override-tjsggz).ant-carousel .slick-prev::after, :where(.css-dev-only-do-not-override-tjsggz).ant-carousel .slick-next::after {
+  box-sizing: border-box;
+  position: absolute;
+  top: 2.3431457505076203px;
+  inset-inline-start: -1.656854px;
+  display: inline-block;
+  width: 20.313708px;
+  height: 20.313708px;
+  border: 0 solid rgb(0, 0, 0);
+  border-inline-width: 3px 0;
+  border-block-width: 3px 0;
+  border-radius: 1px;
+  content: "";
+  padding: 10px;
+  background: none;
+}
+:where(.css-dev-only-do-not-override-tjsggz).ant-card .ant-card-body { 
+  padding: 0px; 
+  border-radius:00 8px 8px; 
+  }

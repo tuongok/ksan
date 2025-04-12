@@ -15,20 +15,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #e8e8e8;
-    background-color: white;
     justify-content: space-around;
-    background: #FFFFFF ;
-
+    background: black;
+    color: white;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     transition: background-color 0.3s ease;
     z-index: 1000;
+    opacity: 0.4;
 
 }
-
+.header.scrolled {
+  background-color: black;
+  opacity: 1; 
+}
 .logo img {
     width: 100%;
     height: 100%;
@@ -38,29 +40,25 @@
 .header .menu {
     width: 42%;
     justify-content: center;
+    color: white;
 }
-
+.header .menu .button{
+    font-family: var(--font);
+    font-size: 25px;
+}
 .logo {
     height: 100px;
 }
 
 .footermain {
-    background: #FAF9F5;
+    background: #000000;
 }
 
-.footer {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
+.header  a{
+    color: rgb(255, 255, 255);
 }
-
-.footer .text1 {
-    width: 20%;
-    color: rgb(4, 4, 4);
-}
-a{
-    color: black;
+.header a:hover{
+    color: rgb(255, 255, 255);
 }
 .iconn .icon{
     font-size: 40px;
@@ -68,4 +66,153 @@ a{
 }
 .iconn{
     margin-top: 15px;
+}
+.body .layout{
+    display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+}
+.body{
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+}
+.footermain {
+    background: #000000;
+    color: white; 
+    padding: 30px 0; 
+  }
+  
+  .footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    width: 100%;
+  }
+  
+  .footer .fo1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+  }
+  
+  .footer .fo1 span {
+    padding: 8px 15px;
+    font-size: 25px;
+    font-family: var(--font);
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .footer .fo1 span:hover {
+    color: #8b8686; 
+  }
+  
+  .fo2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    
+  }
+  
+.fo2  .logo img {
+    width: 270px; 
+    height: auto;
+  }
+  
+  .title span {
+    display: block; 
+    margin: 5px 0;
+    color: #ccc; 
+    margin-top: 20px;
+    font-size: 18px;
+    
+  }
+.fo2 .title{
+    margin-top: 40px;
+}  
+  
+  .fo3 {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-right: 30px;
+  }
+  
+  .fo3 .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-width: 120px;
+  }
+  
+  .fo3 .box .anticon1{
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s;
+    padding: 10px;
+    background: rgb(47, 116, 255);
+    border-radius: 50%;
+  }
+  .fo3 .box .anticon3{
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s;
+    padding: 10px;
+    background: rgb(255, 47, 130);
+    border-radius: 50%;
+  }
+  .fo3 .box .anticon2{
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s;
+    padding: 10px;
+    background: rgb(255, 47, 47);
+    border-radius: 50%;
+  }
+  .fo3 .card{
+    width:200px ;
+  }
+  .fo3 .card img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .fo3 .box .anticon:hover {
+    color: var(--color-two);
+  }
+  @media (max-width: 768px) {
+    .footer .fo1 {
+      gap: 10px;
+    }
+    
+    .fo1 span {
+      font-size: 14px;
+    }
+    
+    .fo3 {
+      gap: 15px;
+    }
+  }
+.imagee{
+  width: 110px;
+  height: auto;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.imagee img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }

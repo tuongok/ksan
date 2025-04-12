@@ -1,144 +1,111 @@
-import { Menu } from 'antd';
-import "./style.css"
-import { SettingOutlined, HomeOutlined } from "@ant-design/icons";
+import { Menu, Button, Modal } from 'antd';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import LOGONEW from "../../img/logonewbe.jpg";
+import LOGONEW from "../../img/tuonglogo.png";
+import "./style.css";
+import { CaretDownOutlined, EuroCircleOutlined, MailOutlined, SearchOutlined, TagOutlined, UserAddOutlined } from '@ant-design/icons';
+import { DatePicker, Space } from 'antd';
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import Button1 from '../button';
+
+dayjs.extend(customParseFormat);
+
+const { RangePicker } = DatePicker;
 function Menuu() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedRange, setSelectedRange] = useState([]);
+  const handleRangeChange = (dates) => {
+    setSelectedRange(dates);
+  };
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   const items = [
     {
-      label:"HCM 25°C"
+      label: <Link to="/"><div className="logo"><img src={LOGONEW} alt="oke" /></div></Link>,
+      key: 'Logo'
     },
     {
-      label: <Link to="/">Home</Link>,
-      children: [
-        {
-          label: "Main Home"
-        },
-        {
-          label: "Hostel Home",
-        },
-        {
-          label: "Summer Reort",
-        },
-        {
-          label: "Vocation Resort",
-        },
-        {
-          label: "Hotel Home",
-          key: "Hotel Home"
-        },
-        {
-          label: "Landing",
-        }
-      ]
+      label: <Link to="/">Home</Link>
     },
     {
-      label: <Link to="/room">Room</Link>,
+      label: (
+        <span className='button' onClick={showModal}>
+          <SearchOutlined /> Book
+        </span>
+      ),
+      key: 'Checkin',
+    },
+    {
+      label: <Link to="/room">Phòng <CaretDownOutlined /></Link>,
       key: 'Room',
       children: [
-        {
-          label: "Room List Tyles"
-        },
-        {
-          label: "Room List Layouts",
-        },
-        {
-          label: "Single Room"
-        },
-        {
-          label: "My Account",
-        },
-        {
-          label: "Cart"
-        },
-        {
-          label: "Check out",
-        }
-
+        { label: "Standard" },
+        { label: "Tầng Execute" },
+        { label: "Suit" }
       ]
     },
     {
-      label: "Pages",
-      key: 'Pages',
+      label: <Link to="/tours">Tours </Link>,
+      key: 'Tours',
       children: [
-        {
-          label: <Link to="/blog">About us</Link>
-        },
-        {
-          label: "Promottion & Offers"
-        },
-        {
-          label: "Local activities",
-        },
-        {
-          label: "Menu page"
-        },
-        {
-          label: "FAQ page",
-        },
-        {
-          label: "404 Error page"
-        }
+        { label: <Link to="/blog">Ưu đãi <CaretDownOutlined /></Link> },
+        { label: "Các gói dịch vụ nghĩ dưỡng" },
+        { label: "Giảm giá nhiều tùy dịch vụ" },
+        { label: "Dịch vụ ẩm thực " }
       ]
     },
     {
-      label:  <Link to="/"><div className="logo"><img src={LOGONEW} alt='oke' ></img> </div></Link>,
-      key: 'Logo'
-      
-    },
-    {
-      label: <Link to="/blog"> Blog</Link>,
+      label: <Link to="/blog">Ẩm thực <CaretDownOutlined /></Link>,
       key: 'Blog',
       children: [
-        {
-          label: <Link to="/blog">Right siderbar</Link>
-        },
-        {
-          label: "Left siderbar"
-        },
-        {
-          label: "Blog Pinterest",
-        },
-        {
-          label: "Blog Single",
-          children: [
-            {
-              label: <Link to="/blog">No sidebar</Link>
-            },
-            {
-              label: <Link to="/blog">Standard</Link>
-            },
-            {
-              label: "Gallery"
-            },
-            {
-              label: "Quote",
-            },
-            {
-              label: "Link"
-            },
-            {
-              label: "Audio",
-            },
-            {
-              label: "Video"
-            }
-          ]
-        }
+        { label: "Bar & Lounge" },
+        { label: "Phòng ẩm thực" },
+        { label: "Mini game" }
       ]
     },
-    {
-      label: "Contact",
-      key: 'Contact'
-      
-    },
-    {
-      label: <Link to="/blog">StayConnect@gmail.com</Link>,
-      key: 'email',}
-  ]
+    { label: <Link to="/blog"><MailOutlined />   danganhtuongg@gmail.com</Link>, key: 'email' }
+  ];
+
   return (
     <>
-      <Menu className='menuu' mode="horizontal"  items={items} />;
+      <Menu className="menuu" mode="horizontal" items={items} />
+      <Modal
+        open={isModalOpen}
+        onCancel={handleCancel}
+        width="70%"
+        footer={null}
+      >
+        <div className='booking'>
+          <div className='top'>
+            <Space direction="vertical" size={12}>
+              <RangePicker className='date'
+                format="YYYY-MM-DD HH:mm:ss"
+                onChange={handleRangeChange}
+                placeholder={['Check-in', 'Check-out']}
+                
+                showTime={{
+                  defaultValue: [dayjs('00:00:00', 'HH:mm:ss'), dayjs('23:59:59', 'HH:mm:ss')],
+                }}
+              />
+            </Space>
+            <Button1 />
+          </div>
+          <div className='under'>
+            <div className='box'><UserAddOutlined />1 Phòng ,1 người <CaretDownOutlined /></div>
+            <div className='box'><TagOutlined /> <input type='checkbox' /> Speacial Rates...</div>
+            <div className='box'><EuroCircleOutlined />  <input type='checkbox' /> Use pointt </div>
+            <div className='box'><input type='checkbox' /> Dịch vụ cho người tàn tật</div>
+          </div>
+        </div>
+
+      </Modal>
     </>
   );
 }

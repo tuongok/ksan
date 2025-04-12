@@ -8,14 +8,60 @@
     --color-text2: #777777;
     --font: "EB Garamond", sans-serif;
 }
-.menuu{
+.menuu {
     border: none;
     width: 120%;
     font-size: 25px;
     justify-content: space-around;
     background: transparent;
     align-items: center;
-    margin-right:80px ;
+    margin-right: 80px;
     font-family: var(--font);
-
+    color: white; 
+  }
+.booking{
+    padding: 20px 0;
+}
+.booking .top {
+    text-align: center;
+    padding:20px 0;
+}
+.booking .top .date {
+    font-size: 30px;
+    align-items: center;
+    border-radius: 0;
+    border: 1px solid rgb(195, 192, 192);
+    font-weight: bold;
+}
+.booking .top button {
+    font-size: 20px;
+    align-items: center;
+    margin-left: 30px;
+    padding: 20px 20px;
+    background: orange;
+    border-radius: 0;
+    border: 0;
+    font-size: 18px;
+    border: 0;
+    cursor: pointer;
+    font-family: var(--font);
+}
+.booking .under {
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+}
+.menuu .ant-menu-item, 
+.menuu .ant-menu-submenu-title, 
+.menuu .ant-menu-item a {
+  color: white; 
+}
+.menuu .ant-menu-item, 
+.menuu .ant-menu-submenu-title, 
+.menuu .ant-menu-item:hover a {
+  color: white; 
+}
+.menuu:hover span{
+    color: white;
 }

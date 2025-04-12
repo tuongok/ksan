@@ -1,0 +1,200 @@
+.room{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.room .room_item{
+    width: 48%;
+    text-align: center;
+}
+.room .img{
+    aspect-ratio:4/3 ;
+    width: 100%;
+    height: 381.41px;
+    object-fit: cover;
+    overflow: hidden;
+    
+}
+.room .room_item img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.5s ease-in;
+}
+.room .img:hover img{
+    transform: scale(1.05);
+}
+.room .room_item .name{
+    font-size: 30px;
+    padding: 20px 0;
+    font-family: var(--font);
+    margin: 0;
+    color: #333333;
+    padding-top: 10px;
+}
+.room .room_item .pricee{
+    font-size: 23px;
+    padding: 10px 0;
+    font-family: var(--font);
+    color: #4a4a4a;
+    padding: 10px 30px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+}
+.room .room_item .btn{
+   padding: 10px 20px;
+   color: white;
+   background: #C59F30;
+   font-size: 16px;
+   margin: 20px 0 20px 0;
+   border: 0;
+   cursor: pointer;
+}
+.room .room_item .btn:hover{
+    background: #a48529;
+}
+.r10{
+    width: 100%;
+    height: 600px;
+    
+}
+.r10 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.titlehead {
+    padding: 30px 0;
+    text-align: center;
+}
+.titlehead .t1{
+    font-family: var(--font);
+    font-size: 50px;
+    color:#282828;
+
+}
+.titlehead .t2{
+    font-size: 16px;
+    color:#5d5c5c;
+    padding-top: 20px;
+    text-align: justify;
+
+}
+.modal{
+    text-align: center;
+    padding: 0;
+    background: #f7f7f7;
+}
+.modal .modal_title{
+    font-size: 45px;
+    font-family: var(--font);
+    color: #282828;
+
+}
+.modal .modal_button{
+    padding:10px 100px;
+    background: rgb(31, 30, 30);
+    color: white;
+    border: 0;
+    cursor: pointer;
+    width: 200px;
+
+}
+.modal .modal_button:hover{
+    color: rgb(197, 203, 175);
+    background: rgb(58, 56, 56);
+}
+.modal .modal_detail{
+    font-size: 35px;
+    color: #282828;
+    margin-top: 40px;
+    font-family: var(--font);
+    
+}
+.modal .modal_desc{
+    font-size: 17px;
+    color: #333333;
+    text-align: justify;
+    padding: 0 100px;
+
+}
+.modal_main .infomation{
+    padding: 30px 100px;
+
+}
+.modal_main .infomation .infomation_title{
+    font-size: 20px;
+    font-family: var(--font);
+    padding: 25px 0;
+    border-bottom:2px solid #73470a;
+    color: #282828;
+    text-align: left;
+}
+.modal_main .infomation .infomation_title span{
+    padding-left: 200px;
+}
+
+.modal .modal_price{
+    font-weight: 100;
+    color: rgb(115, 115, 108);
+    font-size: 20px;
+    padding: 10px 20px;
+    
+
+}
+.modal .modal_3d1{
+    font-size: 25px;
+    font-weight: 600;
+    color: #282828;
+    padding: 10px 20px;
+    font-family: var(--font);
+    margin-bottom: 20px;
+}
+
+
+:where(.css-dev-only-do-not-override-tjsggz).ant-modal .ant-modal-content {
+    position: relative;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    pointer-events: auto;
+    padding: 0;
+}
+.modal_main{
+    background: white;
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px 30px;
+    padding-bottom: 100px;
+    margin-top: -120px;
+    z-index: 1000;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    
+}
+.modal .img {
+    width: 100%;
+    height: 450px;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.modal .modal_main .carousel-container{
+    padding: 0;
+}
+.modal .modal_main .item_room{
+    font-size: 20px;
+    font-family: var(--font);
+} 
+.modal .item_slide .item_room{
+    font-size: 30px;
+    font-family: var(--font);
+    padding-top: 40px;
+    padding-bottom: 20px;
+}

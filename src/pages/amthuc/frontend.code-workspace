@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../.."
+		},
+		{
+			"path": "../../../../../../web môn cô phụng/fontendclass"
+		},
+		{
+			"path": "../../../../../../web môn cô phụng/Ca1_LeTriThien_NguyenTuanMinh_DangAnhTuong_StayConnect"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "fontendclass"
+	}
+}

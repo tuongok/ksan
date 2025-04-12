@@ -29,19 +29,6 @@ const Checkinout = () => {
           defaultValue: [dayjs('00:00:00', 'HH:mm:ss'), dayjs('23:59:59', 'HH:mm:ss')],
         }}
       />
-{/* 
-      <Modal
-        title="Thông báo"
-        visible={showmodal}
-        onOk={handleModalClose}
-        onCancel={handleModalClose}
-      >
-        <p>
-          Bạn đã chọn khoảng ngày từ:{' '}
-          {selectedRange[0] ? selectedRange[0].format('YYYY-MM-DD HH:mm:ss') : 'N/A'} đến{' '}
-          {selectedRange[1] ? selectedRange[1].format('YYYY-MM-DD HH:mm:ss') : 'N/A'}
-        </p>
-      </Modal> */}
     </Space>
   );
 };

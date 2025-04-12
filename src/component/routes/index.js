@@ -1,7 +1,8 @@
 
 import Layoutdf from "../../layout";
-import Blog from "../../pages/blog";
-import Cart from "../../pages/blog";
+import Blog from "../../pages/amthuc";
+import Cart from "../../pages/amthuc";
+import Tours from "../../pages/amthuc/tours";
 import Home from "../../pages/home";
 import Room from "../../pages/room";
 export const routes=[
@@ -20,6 +21,10 @@ export const routes=[
             {
                 path:"/room",
                 element:<Room />,
+            },
+            {
+                path:"/tours",
+                element:<Tours/>
             }
         ]
     }

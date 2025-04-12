@@ -4,14 +4,14 @@ function Button1() {
   const success = () => {
     messageApi.open({
       type: 'success',
-      content: 'Booking successfully',
+      content: 'Chúc mừng bạn đã đặt phòng thành công !',
       duration: 3,
     });
   };
     return (
         <>
         {contextHolder}
-        <Button onClick={success} className="booknow">Book Now</Button>
+        <Button onClick={success} className="booknow">Đặt Phòng</Button>
         
         </>
     )
